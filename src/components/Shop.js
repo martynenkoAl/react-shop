@@ -14,7 +14,7 @@ export default function Shop() {
   const [isBasketShow, setIsBasketShow] = useState(false);
   const [alertName, setAlertName] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [goodsPerPage] = useState(10);
+  const [goodsPerPage] = useState(16);
 
   useEffect(function getGoods() {
     fetch(API_URL, {
