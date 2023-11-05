@@ -1,13 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ShopContext } from '../context';
 
-export default function Pagination({
-  totalGoods,
-  goodsPerPage,
-  handlePagination,
-  nextPage,
-  prevPage,
-  currentPage,
-}) {
+export default function Pagination({ totalGoods }) {
+  const { goodsPerPage, handlePagination, nextPage, prevPage, currentPage } =
+    useContext(ShopContext);
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalGoods / goodsPerPage); i++) {
